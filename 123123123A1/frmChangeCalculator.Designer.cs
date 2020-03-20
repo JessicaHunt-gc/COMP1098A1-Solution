@@ -40,9 +40,7 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblPaid = new System.Windows.Forms.Label();
             this.lblChange = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblLoonies = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblQuarters = new System.Windows.Forms.Label();
             this.lblDimes = new System.Windows.Forms.Label();
             this.lblNickels = new System.Windows.Forms.Label();
@@ -66,6 +64,7 @@
             // 
             // txtChange
             // 
+            this.txtChange.Enabled = false;
             this.txtChange.Location = new System.Drawing.Point(411, 104);
             this.txtChange.Name = "txtChange";
             this.txtChange.Size = new System.Drawing.Size(100, 38);
@@ -73,6 +72,7 @@
             // 
             // txtToonies
             // 
+            this.txtToonies.Enabled = false;
             this.txtToonies.Location = new System.Drawing.Point(91, 227);
             this.txtToonies.Name = "txtToonies";
             this.txtToonies.Size = new System.Drawing.Size(100, 38);
@@ -80,6 +80,7 @@
             // 
             // txtLoonies
             // 
+            this.txtLoonies.Enabled = false;
             this.txtLoonies.Location = new System.Drawing.Point(256, 227);
             this.txtLoonies.Name = "txtLoonies";
             this.txtLoonies.Size = new System.Drawing.Size(100, 38);
@@ -87,6 +88,7 @@
             // 
             // txtQuarters
             // 
+            this.txtQuarters.Enabled = false;
             this.txtQuarters.Location = new System.Drawing.Point(389, 227);
             this.txtQuarters.Name = "txtQuarters";
             this.txtQuarters.Size = new System.Drawing.Size(100, 38);
@@ -94,6 +96,7 @@
             // 
             // txtDimes
             // 
+            this.txtDimes.Enabled = false;
             this.txtDimes.Location = new System.Drawing.Point(528, 227);
             this.txtDimes.Name = "txtDimes";
             this.txtDimes.Size = new System.Drawing.Size(100, 38);
@@ -101,6 +104,7 @@
             // 
             // txtNickels
             // 
+            this.txtNickels.Enabled = false;
             this.txtNickels.Location = new System.Drawing.Point(665, 227);
             this.txtNickels.Name = "txtNickels";
             this.txtNickels.Size = new System.Drawing.Size(100, 38);
@@ -142,15 +146,6 @@
             this.lblChange.TabIndex = 11;
             this.lblChange.Text = "Change:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 32);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "label1";
-            // 
             // lblLoonies
             // 
             this.lblLoonies.AutoSize = true;
@@ -159,15 +154,6 @@
             this.lblLoonies.Size = new System.Drawing.Size(124, 32);
             this.lblLoonies.TabIndex = 13;
             this.lblLoonies.Text = "Loonies:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 32);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "label2";
             // 
             // lblQuarters
             // 
@@ -200,19 +186,21 @@
             // 
             this.btnCalculate.Location = new System.Drawing.Point(91, 336);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(139, 56);
+            this.btnCalculate.Size = new System.Drawing.Size(202, 56);
             this.btnCalculate.TabIndex = 18;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(665, 336);
+            this.btnClear.Location = new System.Drawing.Point(635, 336);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(119, 40);
+            this.btnClear.Size = new System.Drawing.Size(149, 56);
             this.btnClear.TabIndex = 19;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // frmChangeCalculator
             // 
@@ -224,9 +212,7 @@
             this.Controls.Add(this.lblNickels);
             this.Controls.Add(this.lblDimes);
             this.Controls.Add(this.lblQuarters);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblLoonies);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblChange);
             this.Controls.Add(this.lblPaid);
             this.Controls.Add(this.lblTotal);
@@ -260,9 +246,7 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblPaid;
         private System.Windows.Forms.Label lblChange;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblLoonies;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblQuarters;
         private System.Windows.Forms.Label lblDimes;
         private System.Windows.Forms.Label lblNickels;
